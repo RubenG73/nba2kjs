@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    font-size: 18px;
+    color: white;
+}
+
+:root {
+    
+    --black: #131415;
+    --grey: #404040;
+    --gold: #917C4A;
+}
+
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    width: 50%;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid var(--gold);
+
+}
+
+.img {
+    height: 100%;
+    width: 60%;
+    object-fit: cover;
+    border-bottom-right-radius: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    
+    
+}
+
+input {
+    width: 70%;
+    height: 25px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 2px 0px 0px 10px;
+    margin: 6px;
+    font-size: 0.8em;
+}
+
+.ingresar {
+    background-color: var(--gold);
+    color: white;
+    width: 74%;
+    height: 28px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-top: 6px;
+    font-size: 0.8em;
+    font-weight: 540;
+}
+
+label {
+    width: 70%;
+}
+
+.inicio {
+    background-color: var(--gold);
+    color: white;
+    width: 45%;
+    height: 28px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-top: 40px;
+    
+    font-size: 0.8em;
+    font-weight: 540;
+}
+
+@media (max-width:765px) {
+    .img {
+        display: none;
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.inicio a {
+    text-decoration: none;
+    color: white;
+}

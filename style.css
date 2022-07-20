@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Jost", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    width: 100%;
+    color: white;
+}
+
+:root {
+    
+    --black: #131415;
+    --grey: #404040;
+    --gold: #917C4A;
+}
+
+.section-container {
+    background-color: var(--black);
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+    width: 95%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.header-container {
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 1500px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px 0px 50px;
+
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+     
+}
+
+.logo-container img {
+    object-fit: scale-down;
+}
+
+.navbar,
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-list {
+    gap: 50px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 20px;
+}
+
+#menu {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+.navbar-list li > a:hover {
+    font-size: 25px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 0px 50px 0px 10px;
+    }
+    #menu {
+        display: flex;
+    }
+    .navbar-list {
+        position: absolute;
+        background-color: var(--black);
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        z-index: 9999;
+        display: none;
+    }
+
+    #toggle-menu:checked + .navbar-list {
+        display: flex;
+    }
+}
+
+#hero {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 70px 50px;
+    gap: 20px;
+}
+
+.hero-img {
+    background-image: url(./imgs/MJ-and-LBJ.jpg);
+    height: 350px;
+    flex: 1 1 300px;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-container {
+    max-width: max(60%, 600px);
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20%;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+
+.description-container h1 {
+    font-weight: 700;
+    font-size: 70px;
+    letter-spacing: 2px;
+    
+}
+
+.description-container p {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .hero-img {
+        display: none;
+    }
+
+    .description-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+#productos {
+    flex-direction: column;
+    gap: max(120px, 10%);
+}
+
+.productos-title {
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+}
+
+.team-logos {
+    background-image: url(./imgs/teamlogos.jpg);
+    height: 250px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jerseys-container-gral {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    
+}
+
+.jersey-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 300px;
+    height: 450px;
+    border: var(--gold) solid 2px;
+    border-radius: 10px;
+    padding: 30px;
+    
+}
+
+.jersey-img img  {
+    max-width:100%;
+    max-height:100%;
+}
+
+.jersey-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.jersey-description h3 {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.jersey-description p {
+    font-size: 20px;
+}
+
+.buy-button {
+    background-color: var(--gold);
+    color: white;
+    border: 0px;
+    outline: none;
+    width: 180px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+.buy-button:hover {
+    background-color: white;
+    color: var(--gold);
+    transition: all 0.4s ease-in;
+}
+
+.jersey-vermas button {
+    background-color: var(--gold);
+    color: white;
+    border: 0px;
+    outline: none;
+    width: 380px;
+    height: 80px;
+    font-weight: 700;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+.jersey-vermas button:hover {
+    background-color: white;
+    color: var(--gold);
+}
+
+@media (max-width: 1010px) {
+    .jerseys-container-gral {
+        
+        justify-content: space-around;
+        height: auto;
+        padding: 30px 0;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .team-logos {
+        display: none;
+    }
+}
+
+#contacto {
+    
+    flex-direction: column;
+    gap: max(100px, 30%);
+}
+
+.contacto-title {
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+}
+
+.contacto-container-gral {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 85%;
+
+}
+
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 25%;
+    height: 200px;
+    /* justify-content: space-around; */
+    
+}
+
+.contacto-descripcion-title {
+    font-size: 18px;
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold);
+}
+
+.contacto-descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.contacto-descripcion img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    max-height: 80%;
+    padding-left: 45px;
+}
+
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contacto-container-gral {
+        flex-direction: column;
+        justify-content: spacebe;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    #sponsors  {
+        display: none;
+        
+    }
+
+    .contacto-container {
+        margin-bottom: 100px;
+    }
+
+    .contacto-title {
+        width: 70%;
+        font-size: 30px;
+    }
+
+    .redes {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 13px;
+    
+}
+
+.footer img {
+    width: 50px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* <---------------------------- LOGIN --------------------------->  */
+
